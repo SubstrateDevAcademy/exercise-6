@@ -87,7 +87,14 @@ impl Config for Test {
 
 // Build genesis storage according to the mock runtime.
 pub fn new_test_ext() -> sp_io::TestExternalities {
-	let mut t: sp_io::TestExternalities = frame_system::GenesisConfig::default().build_storage::<Test>().unwrap().into();
+	let mut t = frame_system::GenesisConfig::default().build_storage::<Test>().unwrap();
+
+	pallet_balances::GenesisConfig::<Test>{
+		balances: vec![(200, 500)],
+	}.assimilate_storage(&mut t).unwrap();
+
+	let mut t: sp_io::TestExternalities = t.into();
+
 	t.execute_with(|| System::set_block_number(1) );
 	t
 }
@@ -178,4 +185,9 @@ fn handle_self_transfer() {
 #[test]
 fn can_set_price() {
 	// TODO: write tests for `fn set_price`
+}
+
+#[test]
+fn can_buy() {
+	// TODO: write tests for `fn buy`
 }
