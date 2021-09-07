@@ -1,3 +1,20 @@
+# Substrate Runtime Developer Academy
+
+## Exercise Six
+
+1. Fork & clone this project
+2. Add new tests for `fn set_price` and `fn buy`
+    - [./pallets/kitties/src/tests.rs](./pallets/kitties/src/tests.rs#L200)
+    - Make sure you have covered happy paths, error paths and edge cases
+3. Update test for `fn transfer` to check the updated behaviour regards to KittyPrices
+    - [./pallets/kitties/src/tests.rs](./pallets/kitties/src/tests.rs#L166)
+4. Run benchmark related commands and see if the output makes sense
+    - `make benchmark`
+    - `make benchmark-output`
+    - `make benchmark-traits`
+
+---
+
 # Substrate Node Template
 
 [![Try on playground](https://img.shields.io/badge/Playground-Node_Template-brightgreen?logo=Parity%20Substrate)](https://playground.substrate.dev/?deploy=node-template)
