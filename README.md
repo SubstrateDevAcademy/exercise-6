@@ -13,6 +13,8 @@
     - `make benchmark-output`
     - `make benchmark-traits`
 
+Solution: https://github.com/SubstrateDevAcademy/exercise-6/commit/b61934df78ce55a1c5da2f3cd0ba5e9c84a4e99f
+
 ---
 
 # Substrate Node Template
